@@ -16,3 +16,5 @@ First does a query similar to that in dsr-phase.py to get fihgt and wipe phase i
 - If the query for events in a particular phase for a log somehow surpasses 300 events, it will not get the next page. Will fix eventually but should only affect fresh proggers (lots of wipes in p2) or a really FAT log
 - This script isn't 100% accurate, of course. E.G if party wipes to Wyrmhole but one person stays alive long enough to get to tethers, the script will count that as a wipe on the tethers.
 - There may be counting issues if the party wipes before a breakpoint ability is casted as the phase rolls over. Depends on how FFLogs moves to the next phase
+- For p6 and p7, the casts are repeated with the same ability ID. I don't think there's a way to differentiate them consistently before we query fflogs so I will need to add a check later down the line. Not now though :)
+- If you have uploaded the same log multiple times, it might double count. I'm not sure how the FFLogs API works and I'm too lazy to implement duplicate checking
