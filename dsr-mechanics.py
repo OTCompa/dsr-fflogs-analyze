@@ -199,8 +199,9 @@ for log in logs["data"]["reportData"]["reports"]["data"]:
         # if they do, add them to fight_IDs, otherwise skip phase
         fight_IDs = []
         for fight in fights:
-            if fight["kill"] == True and phase == Phase.kill:
-                wipe_frequency["kill"][6969] += 1
+            if fight["kill"] == True:
+                if phase == Phase.kill:
+                    wipe_frequency["kill"][6969] += 1
                 continue
             if fight["lastPhaseAsAbsoluteIndex"] == phase.value:
                 fight_IDs.append(fight["id"])
