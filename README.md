@@ -6,7 +6,7 @@ Pie chart of wipes by phase in DSR of your guild's logs.
 ### dsr-mechanics.py
 Table of frequency of wipes to each major mechanic.  
 Not completely finished but good enough. May decide to complete it one day.  
-Cost about 200-300 FFLogs API points and took 2-3 minutes to make all the queries for me. YMMV 
+Cost about 200-300 FFLogs API points and took 2-3 minutes to make all the queries for me. YMMV  
 **How it works**  
 Using the last cast of an ability in a fight, we can estimate where the wipe happened.  
 First does a query similar to that in dsr-phase.py to get fihgt and wipe phase info. Then for each log, queries events of major breakpoint abilities for each phase. The last breakpoint ability seen is the mechanic the group wiped on. 
